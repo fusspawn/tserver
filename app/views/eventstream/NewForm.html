@@ -1,0 +1,33 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<header class="hero-unit" style="background-color:#A9F16C">
+  <div class="container">
+    <div class="row">
+      <div class="hero-text">
+        <h1>New Event</h1>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+       <form action="createevent" method="POST">
+         <input type="text" name="event_type" id="event_type" />
+         <label for="event_type"> Event Type: </label> 
+         <input type="text" name="event_json" id="event_json" />
+         <label for="event_json"> Event JSON: </label> 
+       </form>  
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}
