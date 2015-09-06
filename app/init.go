@@ -25,12 +25,6 @@ func init() {
 	// register startup functions with OnAppStart
 	// ( order dependent )
 	revel.OnAppStart(controllers.InitDB)
-	// revel.OnAppStart(FillCache)
-	
-	
-    //revel.InterceptMethod((*GorpController).Begin, revel.BEFORE)
-    //revel.InterceptMethod((*GorpController).Commit, revel.AFTER)
-    //revel.InterceptMethod((*GorpController).Rollback, revel.FINALLY)
 }
 
 // TODO turn this into revel.HeaderFilter
