@@ -29,9 +29,9 @@ func InitDB() {
 
     Dbm.AutoMigrate(&models.EventMessage{})
 	
-    revel.InterceptMethod((*GormController).Begin, revel.BEFORE)
-    revel.InterceptMethod((*GormController).Commit, revel.AFTER)
-    revel.InterceptMethod((*GormController).Rollback, revel.FINALLY)
+    //revel.InterceptMethod((*GormController).Begin, revel.BEFORE)
+    //revel.InterceptMethod((*GormController).Commit, revel.AFTER)
+    //revel.InterceptMethod((*GormController).Rollback, revel.FINALLY)
 }
 
 
@@ -69,3 +69,4 @@ func (c *GormController) Rollback() revel.Result {
     c.Txn = nil
     return nil
 }
+

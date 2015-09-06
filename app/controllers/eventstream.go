@@ -16,7 +16,7 @@ func (c EventStream) NewForm() revel.Result {
 
 func (c EventStream) CreateEvent(event_type, event_json string) revel.Result {
 	ins := &models.EventMessage{EType:event_type,  Data:event_json,  Handled:false}
-	c.Txn.NewRecord(ins)
-	c.Txn.Create(ins)
+	//c.Txn.NewRecord(ins)
+	//c.Txn.Create(ins)
 	return c.RenderJson(ins)
 }
